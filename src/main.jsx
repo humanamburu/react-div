@@ -1,4 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-render(<div>Hello world</div>, document.body);
+import Draggable from './components/draggable';
+
+render(
+    <div>
+        <Draggable />
+    </div>,
+    document.querySelector('#react-root'));
