@@ -14,14 +14,35 @@ module.exports = {
         extensions: ['.js', '.jsx']
     },
     module: {
-        rules: [{
-            test: /.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-            query: {
-                presets: ['react']
-            }
-        }]
+        rules: [
+            {
+                test: /.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react']
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                ]
+            },
+            {
+                test: /\.styl?$/,
+                include: [
+                    path.resolve(__dirname, 'src'),
+                ],
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'resolve-url-loader',
+                    'stylus-loader',
+                ]
+            },
+        ]
     },
     devtool: 'source-map',
     plugins: [
