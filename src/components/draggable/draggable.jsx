@@ -1,4 +1,3 @@
-import './draggable.styl';
 import React, { PureComponent } from 'react';
 
 export default class Draggable extends PureComponent {
@@ -60,6 +59,6 @@ export default class Draggable extends PureComponent {
             transform: `translate3d(${this.state.x}px, ${this.state.y}px, 0)`
         };
 
-        return <div className='draggable' style={position} ref={element => this.element = element}>{this.props.children}</div>
+        return <div className="draggable" style={position} ref={element => this.element = element}>{this.props.children}</div>
     }
 }
