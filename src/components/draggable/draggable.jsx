@@ -44,6 +44,7 @@ export default class Draggable extends PureComponent {
 
     handleMouseUp() {
         document.removeEventListener('mousemove', this.onMouseMove);
+        document.removeEventListener('mouseup', this.onMouseUp);
     }
 
     componentDidMount() {
