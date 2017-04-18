@@ -1,2 +1,43 @@
+html
+    height 100%
+    min-height 100%
+    font-family 'Montserrat', sans-serif
+    background radial-gradient(ellipse at bottom, #161631 0%, #000 100%)
+
 .draggable
     display inline-block
+
+
+.hourglass-container
+    position absolute
+    animation inf-rotate 5s infinite;
+    margin 50px
+
+.tip
+    color white
+    text-align center
+    font-size 18px
+    font-weight 300
+    marging 20px
+    user-select none
+
+    span
+        color #d5003b
+        font-weight 500
+
+@keyframes inf-rotate
+    0% {
+        transform rotate(0)
+    }
+
+    45% {
+        transform rotate(180deg)
+    }
+
+    55% {
+        transform rotate(180deg)
+    }
+
+    100% {
+        transform rotate(360deg)
+    }

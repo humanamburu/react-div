@@ -1,3 +1,5 @@
+import './_draggable.styl';
+
 import React, { PureComponent } from 'react';
 
 export default class Draggable extends PureComponent {

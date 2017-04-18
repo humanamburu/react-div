@@ -1,0 +1,33 @@
+glass-width = 50px
+glass-height = 50px
+
+top-glass-color = #e3eaff
+bottom-glass-color = #e3eaff
+
+.hourglass
+    .glass
+        width glass-width
+        height (glass-height / 2)
+        position relative
+
+    .top
+        background-color top-glass-color
+
+        &:before
+            content ''
+            position absolute
+            border (glass-width / 2) solid transparent
+            border-top (glass-height / 2) solid top-glass-color
+            top (glass-height / 2)
+
+
+    .bottom
+        margin-top (.8 * glass-height)
+        background-color bottom-glass-color
+
+        &:before
+            content ''
+            position absolute
+            border (glass-width / 2) solid transparent
+            border-bottom (glass-height / 2) solid bottom-glass-color
+            top -(glass-height)
