@@ -1,2 +1,3 @@
-# react-div
-webpack react template
+# react-draggable
+
+Draggable React wrapper.
